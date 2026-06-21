@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>乐鱼体育 — 快速识别. 聚焦体育数据与赛事资讯</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background-color: #faf8f5;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            color: #2c2b28;
+            line-height: 1.6;
+            padding: 2.5rem 1.8rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1, h2, h3, h4 { font-weight: 500; letter-spacing: -0.01em; line-height: 1.3; }
+        h1 { font-size: 2.6rem; margin-bottom: 1rem; color: #1e1d1b; }
+        h2 { font-size: 1.7rem; margin-bottom: 1rem; border-left: 5px solid #c4a97b; padding-left: 0.9rem; color: #2b2a26; }
+        h3 { font-size: 1.25rem; margin-bottom: 0.5rem; color: #3b3a35; }
+        p { margin-bottom: 1.25rem; }
+        a { color: #8b6f4c; text-decoration: none; border-bottom: 1px solid transparent; transition: border 0.2s, color 0.2s; }
+        a:hover { border-bottom: 1px solid #8b6f4c; color: #5a4a34; }
+        .hero {
+            margin-bottom: 3.5rem;
+            padding: 1.8rem 0 2.5rem;
+            border-bottom: 1px solid #e3ddd3;
+        }
+        .hero p { font-size: 1.1rem; max-width: 72%; color: #4f4c45; }
+        .hero strong { font-weight: 500; color: #2b2a26; }
+
+        .grid-advantages {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+            margin: 2.5rem 0 3rem;
+        }
+        .advantage-card {
+            background: #ffffff;
+            padding: 1.8rem 1.5rem 1.6rem;
+            border-radius: 0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.02), 0 4px 12px rgba(0,0,0,0.02);
+            border: 1px solid #eae5dd;
+            transition: box-shadow 0.25s;
+        }
+        .advantage-card:hover { box-shadow: 0 6px 18px rgba(0,0,0,0.04); }
+        .advantage-card h3 { margin-bottom: 0.4rem; }
+        .advantage-card p { font-size: 0.95rem; color: #4e4b44; margin-bottom: 0; }
+
+        .info-note {
+            background: #f3efe8;
+            padding: 1.8rem 2rem;
+            border-left: 6px solid #b09873;
+            margin: 2.2rem 0 2.8rem;
+            font-size: 1rem;
+        }
+        .info-note p { margin-bottom: 0.4rem; }
+        .info-note strong { font-weight: 500; }
+
+        .faq-summary {
+            display: flex;
+            flex-direction: column;
+            gap: 1.3rem;
+            margin: 2rem 0 2.4rem;
+            padding: 0.5rem 0;
+        }
+        .faq-item {
+            border-bottom: 1px dashed #d9d2c7;
+            padding-bottom: 0.8rem;
+        }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-question { font-weight: 500; margin-bottom: 0.2rem; color: #2c2b28; letter-spacing: 0.01em; }
+        .faq-answer { font-size: 0.95rem; color: #5a5650; }
+
+        .bottom-links {
+            margin-top: 3.2rem;
+            padding-top: 1.8rem;
+            border-top: 1px solid #ded9cf;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.8rem 2.5rem;
+            align-items: center;
+            font-size: 0.95rem;
+        }
+        .bottom-links a { border-bottom: 1px solid transparent; }
+        .bottom-links a:hover { border-bottom: 1px solid #8b6f4c; }
+
+        @media (max-width: 640px) {
+            body { padding: 1.5rem 1.2rem; }
+            h1 { font-size: 2rem; }
+            .hero p { max-width: 100%; }
+            .grid-advantages { gap: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+<section class="hero">
+    <h1>乐鱼体育 · 一眼识别赛事核心</h1>
+    <p>对于快速判断一个体育平台的用途，数据展示方式与信息结构是关键。<strong>乐鱼体育</strong> 专注于提供实时比分、赛程编排与运动项目深度统计。从足球到篮球，从网球到电竞赛事，内容覆盖主流竞技领域，便于用户集中获取比赛动态与基础分析。</p>
+</section>
+
+<h2>平台优势</h2>
+<div class="grid-advantages">
+    <div class="advantage-card">
+        <h3>信息密度高</h3>
+        <p>赛程、即时比分、历史交锋、近期状态并排展示，减少冗余跳转，提升信息获取效率。页面布局以数据优先，降低认知负担。</p>
+    </div>
+    <div class="advantage-card">
+        <h3>赛事覆盖广</h3>
+        <p>每日更新数百场国内外赛事，覆盖五大联赛、欧冠、NBA、CBA、电竞联赛等。满足核心体育迷与轻度关注者的信息需求。</p>
+    </div>
+    <div class="advantage-card">
+        <h3>结构简洁直接</h3>
+        <p>功能分区明确，不堆砌无关模块。从赛事列表到详情页，逻辑连贯。适用于赛前研究、实时跟踪与赛后回顾。</p>
+    </div>
+</div>
+
+<div class="info-note">
+    <p><strong>使用提示</strong> — 新版首页强化了赛事过滤器与时间轴布局。您可以按联赛、日期、运动项目快速筛选。部分统计图表支持展开查看详细数据。无需注册即可浏览大部分赛程与结果。</p>
+</div>
+
+<h2>常见问题摘要</h2>
+<div class="faq-summary">
+    <div class="faq-item">
+        <div class="faq-question">如何找到某一场具体比赛的数据？</div>
+        <div class="faq-answer">通过顶部导航栏“赛事”分类，或使用搜索框输入队伍名称。系统将展示近期的交战记录、积分排名与实时状态。</div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-question">实时比分刷新频率是多少？</div>
+        <div class="faq-answer">核心赛事采用秒级更新，辅助赛事为15–30秒刷新。网络波动时页面会显示“连接中”状态，恢复后自动同步最新数据。</div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-question">是否需要付费才能查看赛程？</div>
+        <div class="faq-answer">基础赛程、即时比分、联赛积分榜完全免费。部分深度统计报告及历史数据导出功能可选择增值服务。</div>
+    </div>
+</div>
+
+<div class="bottom-links">
+    <span>了解更多，可访问 <a href="https://msite-leyu.com.cn">乐鱼体育</a> 官方站点</span>
+    <span>赛程 · 数据 · 赛事资讯</span>
+    <span style="color:#6b655b;">© 2025 信息参考页</span>
+</div>
+
+</body>
+</html>
