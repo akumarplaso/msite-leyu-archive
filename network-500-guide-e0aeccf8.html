@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>简明指南 · 500万彩票网</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: #f3f4f6;
+      color: #1e293b;
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+
+    .page {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1.75rem;
+    }
+
+    /* ===== hero card ===== */
+    .hero {
+      background: white;
+      border-radius: 24px;
+      padding: 2.5rem 2rem;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.7);
+    }
+
+    .hero h1 {
+      font-size: 2.2rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      color: #0f172a;
+      margin-bottom: 0.5rem;
+      line-height: 1.2;
+    }
+
+    .hero .subhead {
+      font-size: 1.1rem;
+      color: #475569;
+      margin-bottom: 1.5rem;
+      border-left: 4px solid #94a3b8;
+      padding-left: 1rem;
+    }
+
+    .hero .tagline {
+      background: #f8fafc;
+      padding: 1rem 1.25rem;
+      border-radius: 16px;
+      border: 1px solid #e2e8f0;
+      font-size: 0.95rem;
+      color: #334155;
+    }
+
+    .hero .tagline a {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px dotted #94a3b8;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .hero .tagline a:hover {
+      color: #1e40af;
+      border-bottom-color: #2563eb;
+    }
+
+    /* ===== 卡片网格 ===== */
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    @media (min-width: 640px) {
+      .grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .grid {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+    }
+
+    .card {
+      background: white;
+      border-radius: 20px;
+      padding: 1.75rem 1.5rem;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.03), 0 1px 2px rgba(0, 0, 0, 0.02);
+      border: 1px solid #eef2f6;
+      transition: transform 0.15s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.05);
+    }
+
+    .card h2 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: #0f172a;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 0.4rem;
+      display: inline-block;
+    }
+
+    .card p, .card li {
+      font-size: 0.95rem;
+      color: #334155;
+    }
+
+    .card ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .card ul li {
+      padding: 0.35rem 0;
+      padding-left: 1.4rem;
+      position: relative;
+    }
+
+    .card ul li::before {
+      content: "·";
+      position: absolute;
+      left: 0.2rem;
+      color: #64748b;
+      font-weight: bold;
+    }
+
+    .card .emoji-icon {
+      font-size: 1.7rem;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .card .link-sentence {
+      margin-top: 1.2rem;
+      font-size: 0.95rem;
+      background: #f8fafc;
+      padding: 0.75rem 1rem;
+      border-radius: 12px;
+      border-left: 3px solid #cbd5e1;
+    }
+
+    .card .link-sentence a {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .card .link-sentence a:hover {
+      text-decoration: underline;
+    }
+
+    /* ===== 提示和 FAQ 区域 ===== */
+    .extra-section {
+      background: white;
+      border-radius: 24px;
+      padding: 2rem 2rem 2rem 2rem;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+      border: 1px solid #eef2f6;
+    }
+
+    .extra-section h2 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 1.2rem;
+      color: #0f172a;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem 2rem;
+    }
+
+    @media (max-width: 600px) {
+      .faq-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .faq-item {
+      border-bottom: 1px solid #e2e8f0;
+      padding-bottom: 0.8rem;
+    }
+
+    .faq-item strong {
+      font-weight: 600;
+      color: #0f172a;
+      display: block;
+      margin-bottom: 0.15rem;
+      font-size: 0.95rem;
+    }
+
+    .faq-item p {
+      font-size: 0.9rem;
+      color: #475569;
+      margin: 0;
+    }
+
+    .reminder-note {
+      margin-top: 1.8rem;
+      background: #f1f5f9;
+      padding: 1rem 1.5rem;
+      border-radius: 18px;
+      border: 1px solid #dbe5f0;
+      font-size: 0.9rem;
+      color: #1e293b;
+    }
+
+    .reminder-note a {
+      color: #2563eb;
+      font-weight: 500;
+      text-decoration: none;
+    }
+
+    .reminder-note a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-note {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #94a3b8;
+      padding-top: 0.3rem;
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- hero 主视觉 -->
+  <div class="hero">
+    <h1>简明指南 · 浏览前了解这些</h1>
+    <div class="subhead">信息卡片式 · 温和提醒</div>
+    <div class="tagline">
+      如果你正在寻找一个提供彩票资讯与相关服务的平台，可以了解一下
+      <a href="https://network-500.com">500万彩票网</a>。
+      本页从实用角度整理了一些信息，帮助你快速判断是否适合自己。
+    </div>
+  </div>
+
+  <!-- 用途卡片 + 适合人群 三列网格 -->
+  <div class="grid">
+    <!-- 卡片1：用途/场景 -->
+    <div class="card">
+      <span class="emoji-icon">📌</span>
+      <h2>常见用途</h2>
+      <ul>
+        <li>查阅彩票开奖结果与历史走势</li>
+        <li>获取玩法规则及简单算奖参考</li>
+        <li>浏览行业动态与彩市资讯</li>
+        <li>了解不同彩种的基本特点</li>
+      </ul>
+      <div class="link-sentence">
+        更多功能可以在 <a href="https://network-500.com">500万彩票网</a> 页面内探索。
+      </div>
+    </div>
+
+    <!-- 卡片2：适合人群 -->
+    <div class="card">
+      <span class="emoji-icon">👤</span>
+      <h2>适合人群</h2>
+      <ul>
+        <li>对彩票规则想快速了解的新人</li>
+        <li>需要集中查看开奖数据的普通用户</li>
+        <li>偏好轻量信息页面的浏览者</li>
+        <li>希望保持理性、仅做信息参考的人</li>
+      </ul>
+      <div class="link-sentence">
+        如果不确定是否匹配，可以先访问 <a href="https://network-500.com">500万彩票网</a> 简单看看。
+      </div>
+    </div>
+
+    <!-- 卡片3：特点 + 自然链接 -->
+    <div class="card">
+      <span class="emoji-icon">⚙️</span>
+      <h2>页面特点</h2>
+      <ul>
+        <li>信息展示直接，减少多余跳转</li>
+        <li>历史数据与基础规则可查</li>
+        <li>界面风格简洁，便于快速浏览</li>
+        <li>内容更新与官方保持同步</li>
+      </ul>
+      <div class="link-sentence">
+        网站地址为 <a href="https://network-500.com">500万彩票网</a>，建议添加书签方便回访。
+      </div>
+    </div>
+  </div>
+
+  <!-- 额外区块：FAQ 摘要 + 访问提醒 -->
+  <div class="extra-section">
+    <h2>🤔 常见疑问摘要</h2>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <strong>这个网站提供购彩服务吗？</strong>
+        <p>主要提供信息查询与数据参考，不涉及直接交易。如需购买请通过合法线下或授权渠道。</p>
+      </div>
+      <div class="faq-item">
+        <strong>数据更新是否及时？</strong>
+        <p>通常开奖后尽快同步更新，具体以页面实际显示为准。建议多对比官方来源。</p>
+      </div>
+      <div class="faq-item">
+        <strong>需要注册才能浏览吗？</strong>
+        <p>大部分内容无需注册即可访问。部分深度功能可能需要简单登录。</p>
+      </div>
+      <div class="faq-item">
+        <strong>移动端体验如何？</strong>
+        <p>页面自适应，在手机和平板上也可正常查看，卡片布局阅读舒适。</p>
+      </div>
+    </div>
+
+    <!-- 访问提醒 -->
+    <div class="reminder-note">
+      ⚠️ <strong>温和提醒</strong>：彩票是一种公益娱乐方式，请理性参与、量力而行。本页仅为信息介绍，不鼓励过度投入。你可以随时通过
+      <a href="https://network-500.com">500万彩票网</a> 了解规则与数据，保持清醒判断。
+    </div>
+  </div>
+
+  <div class="footer-note">
+    — 信息卡片 · 内容仅供参考 —
+  </div>
+</div>
+</body>
+</html>
